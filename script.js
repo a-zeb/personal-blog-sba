@@ -13,6 +13,7 @@ try {
 }
 
 //event listeners
+//Display custom, user-friendly error messages if validation fails. (red text)
 formInp.addEventListener("submit", submit);
 titleInp.addEventListener("change", (e) => {
   //set validation
@@ -26,5 +27,9 @@ submitInp.addEventListener("click", (e) => {
 
 //methods
 function submit(e) {
+  e.preventDefault();
   //run validations
+  //If valid, create a new post object (e.g., with id, title, content, timestamp).
+  //Add edit button which enforces validation and updated storage
+  //add delete button which updates storage
 }
