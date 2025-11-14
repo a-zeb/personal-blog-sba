@@ -1,0 +1,7 @@
+body {
+    background-color: rgba(21, 42, 81, 0.379);
+}
+
+:invalid {
+    border-color: red;
+}
