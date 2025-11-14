@@ -4,44 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-    crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./styles.css" />
     <script src="./script.js" defer></script>
     <title>Document</title>
   </head>
   <body>
-    <div
-      class="container mb-3 p-3 border border-2"
-    >
-      <form action="submit" id="submitForm">
-        <label for="title">Enter Title: </label>
-        <input
-          type="text"
-          name="title"
-          id="title"
-          placeholder="Enter title"
-          class="form-control form-control-lg"
-          required
-        />
-        <br>
-        <label for="content">Enter Content: </label>
-        <textarea
-          id="content"
-          placeholder="Enter content"
-          class="form-control"
-          required
-        ></textarea>
-        <br>
-        <button type="submit" class="submitButton btn btn-primary">Submit</button>
+    <div class="container mb-3 p-3 border border-2">
+      <form action="submit" id="submitForm" novalidate>
+        <div class="mb-3">
+          <label for="title" class="form-label">Enter Title:</label>
+          <input
+            type="text"
+            name="title"
+            id="title"
+            placeholder="Enter title"
+            class="form-control form-control-lg"
+            aria-describedby="titleError"
+            required
+          />
+          <span class="error-message" id="titleError" role="alert"></span>
+        </div>
+        <div class="mb-3">
+          <label for="content" class="form-label">Enter Content:</label>
+          <textarea
+            id="content"
+            placeholder="Enter content"
+            class="form-control"
+            rows="5"
+            aria-describedby="contentError"
+            required
+          ></textarea>
+          <span class="error-message" id="contentError" role="alert"></span>
+        </div>
+        <button
+          type="submit"
+          id="submitButton"
+          class="submitButton btn btn-primary"
+        >
+          Submit Post
+        </button>
       </form>
     </div>
-    <div
-      class="container mb-3 p-3 border border-2"
-      id="blogPosts"
-    ></div>
+    <div class="container mb-3 p-3 border border-2" id="blogPosts"></div>
   </body>
 </html>

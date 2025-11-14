@@ -2,6 +2,15 @@ body {
     background-color: rgba(21, 42, 81, 0.379);
 }
 
-:invalid {
-    border-color: red;
+.error-message {
+    color: #c0392b;
+    font-size: 0.9rem;
+    min-height: 1.2rem;
+    display: block;
+    margin-top: 0.25rem;
+}
+
+.is-invalid {
+    border-color: #c0392b !important;
+    box-shadow: 0 0 0 0.2rem rgba(192, 57, 43, 0.25);
 }
